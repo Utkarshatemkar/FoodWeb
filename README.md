@@ -36,7 +36,7 @@ How to Use
 
 Clone the repository:
 
-git clone https://github.com/Utkarshatemkar/Foodweb.git
+git clone https://github.com/Utkarshatemkar/FoodWeb.git
 
 
 Open index.html in your browser.
