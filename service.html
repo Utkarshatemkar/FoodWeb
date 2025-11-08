@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | MyOnlineMeal</title>
+    <style>
+        /* ----------------- CSS Reset ----------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Baloo Bhai', cursive;
+        }
+
+        /* ----------------- Variables ----------------- */
+        :root {
+            --primary-color: #e67e22;
+            --navbar-height: 80px;
+        }
+
+        /* ----------------- Navbar ----------------- */
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+
+        #logo img {
+            height: 60px;
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #navbar ul li {
+            margin-left: 20px;
+        }
+
+        #navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        #navbar ul li a:hover,
+        #navbar ul li a.active {
+            background-color: white;
+            color: black;
+        }
+
+        /* ----------------- Sections ----------------- */
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.6s ease-out;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        section h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        section ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        section ul li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        section ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* ----------------- Footer ----------------- */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ----------------- Back to Top Button ----------------- */
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+        }
+
+        #backToTop:hover {
+            background-color: #d35400;
+        }
+
+        /* ----------------- Fade-in Animation ----------------- */
+        section.fade-in {
+            opacity: 1 !important;
+            transform: translateY(0px) !important;
+            transition: all 0.8s ease-out;
+        }
+
+        /* ----------------- Responsive ----------------- */
+        @media (max-width: 768px) {
+            section h2 {
+                font-size: 2rem;
+            }
+
+            section h3 {
+                font-size: 1.5rem;
+            }
+
+            #navbar ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #navbar ul li {
+                margin: 5px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://www.shutterstock.com/image-vector/healthy-food-lettering-round-frame-260nw-793250410.jpg"
+                alt="logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html" class="active">Services</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Introduction -->
+    <section>
+        <h2>Welcome to Our Services</h2>
+        <p>We at <b>MyOnlineMeal</b> provide delicious meals delivered to your doorstep. From online ordering to event
+            catering, we ensure quality and timely service.</p>
+    </section>
+
+    <!-- Services List -->
+    <section>
+        <h3>🍕 Online Food Ordering</h3>
+        <p>Order from hundreds of restaurants and cuisines with ease.</p>
+        <ul>
+            <li>Wide variety of dishes</li>
+            <li>Easy tracking of your order</li>
+            <li>Secure online payments</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>🚴 Fast & Safe Delivery</h3>
+        <p>Quick and hygienic delivery by trained partners.</p>
+        <ul>
+            <li>Delivery within 30 minutes</li>
+            <li>Real-time tracking</li>
+            <li>Contactless delivery</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>🎂 Party & Event Catering</h3>
+        <p>Customized catering for all your events and parties.</p>
+        <ul>
+            <li>Tailored food packages</li>
+            <li>On-time setup and serving</li>
+            <li>Expert chefs</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>🥗 Healthy Meal Subscription</h3>
+        <p>Balanced meals delivered regularly for your health goals.</p>
+        <ul>
+            <li>Fresh & organic ingredients</li>
+            <li>Customizable plans</li>
+            <li>Fixed time delivery</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>☕ 24/7 Customer Support</h3>
+        <p>Our support team is always ready to assist you.</p>
+        <ul>
+            <li>Quick responses</li>
+            <li>Friendly support team</li>
+            <li>Customer-first approach</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 MyOnlineMeal | Follow us on
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop">⬆ Back to Top</button>
+
+    <script>
+        // Fade-in sections on scroll
+        const sections = document.querySelectorAll("section");
+        const backToTop = document.getElementById("backToTop");
+
+        const fadeInSections = () => {
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    section.classList.add("fade-in");
+                }
+            });
+        };
+
+        window.addEventListener("scroll", fadeInSections);
+        fadeInSections();
+
+        // Back to top button
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 400) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+
+</html>

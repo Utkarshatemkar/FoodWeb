@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | MyOnlineMeal</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Baloo Bhai', cursive;
+        }
+
+        /* Navbar */
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+
+        #logo img {
+            height: 60px;
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #navbar ul li {
+            margin-left: 20px;
+        }
+
+        #navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        #navbar ul li a:hover,
+        #navbar ul li a.active {
+            background-color: white;
+            color: black;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f8f8f8;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #e67e22;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Contact Form Section */
+        #contact {
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            background: #f2f2f2;
+            padding: 30px;
+            border-radius: 20px;
+            width: 400px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #e67e22;
+        }
+
+        form label {
+            display: block;
+            margin: 15px 0 5px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        form textarea {
+            resize: vertical;
+        }
+
+        form button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        form button:hover {
+            background-color: #d35400;
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive */
+        @media(max-width:500px) {
+            form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://www.shutterstock.com/image-vector/healthy-food-lettering-round-frame-260nw-793250410.jpg"
+                alt="logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Contact Us</h1>
+        <p>Have questions or feedback? We’d love to hear from you!</p>
+    </header>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <form id="contactForm">
+            <h2>Send a Message</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="6" placeholder="Write your message..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 MyOnlineMeal. All rights reserved.
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Form Submission Alert
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`✅ Thank you, ${name}! Your message has been submitted successfully.`);
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>

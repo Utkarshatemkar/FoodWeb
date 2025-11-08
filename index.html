@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery Service in India - MyOnlineMeal</title>
+    <style>
+        /* ---------------- CSS Reset ---------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Baloo Bhai', cursive;
+        }
+
+        /* ---------------- Variables ---------------- */
+        :root {
+            --primary-color: #e67e22;
+            --navbar-height: 80px;
+        }
+
+        /* ---------------- Navbar ---------------- */
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+
+        #logo img {
+            height: 60px;
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #navbar ul li {
+            margin-left: 20px;
+        }
+
+        #navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        #navbar ul li a:hover,
+        #navbar ul li a.active {
+            background-color: white;
+            color: black;
+        }
+
+        /* ---------------- Hero Section ---------------- */
+        #home {
+            position: relative;
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.bitesbee.com/wp-content/uploads/2021/09/banner-3.jpg') no-repeat center center/cover;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #d35400;
+        }
+
+        /* ---------------- Services Section ---------------- */
+        #services-container {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        #services .box {
+            background: #f2f2f2;
+            padding: 20px;
+            border-radius: 20px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #services .box img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        #services .box h2 {
+            margin: 15px 0 10px;
+        }
+
+        #services .box p {
+            font-size: 0.9rem;
+        }
+
+        /* ---------------- Contact Section ---------------- */
+        #contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #contact form {
+            max-width: 400px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #contact input,
+        #contact textarea {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        /* ---------------- Footer ---------------- */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* ---------------- Scroll To Top ---------------- */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            padding: 10px 15px;
+            font-size: 18px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #d35400;
+        }
+
+        /* ---------------- Responsive ---------------- */
+        @media (max-width: 768px) {
+            #services {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://www.shutterstock.com/image-vector/healthy-food-lettering-round-frame-260nw-793250410.jpg"
+                alt="logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h1>Welcome to MyOnlineMeal</h1>
+        <p>Delicious food delivered to your doorstep.</p>
+        <button class="btn" id="orderBtn">Order Now</button>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services-container">
+        <h1>Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://m.recipes.timesofindia.com/photo/90093485/90093485.jpg" alt="">
+                <h2>Food Catering</h2>
+                <p>
+                <ul>
+                    <li><b>Breakfast:</b> Kickstart your morning with fresh breakfast delights
+                    </li>
+                    <li><b>Lunch:</b> Savor our delicious lunch perfect for your day.</li>
+                    <li><b>Desserts:</b> Treat yourself to sweet and delightful desserts.
+                    </li>
+                    <li><b>Snacks:</b> Quick and satisfying snacks for any time.</li>
+                    <li><b>Beverages:</b> Refreshing drinks keep you energized.</li>
+                </ul>
+                </p>
+            </div>
+            <div class="box">
+                <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1120,h_732,c_fill,g_auto/v1661347392/india-food-paratha/india-food-paratha-1120x732.jpg"
+                    alt="">
+                <h2>Bulk Ordering</h2>
+                <p>Order in large quantities for parties, events, or offices. Enjoy fresh and delicious meals delivered
+                    on time, every time.</p>
+
+            </div>
+            <div class="box">
+                <img src="https://static.toiimg.com/thumb/width-350,height-197,imgsize-433792,msid-84375528/84375528.jpg"
+                    alt="">
+                <h2>Food Ordering</h2>
+                <p>Choose from a wide variety of dishes and cuisines. Place your order easily and get it delivered fresh
+                    to your doorstep.</p>
+
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <form>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your phone" required>
+            <textarea name="message" id="message" placeholder="Your message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 MyOnlineMeal. All rights reserved.
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn">↑</button>
+
+    <script>
+        // Scroll-to-top button
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Order Now button
+        document.getElementById('orderBtn').addEventListener('click', () => {
+            window.location.href = 'order.html';
+        });
+
+        // Simple form alert
+        document.querySelector('form').addEventListener('submit', e => {
+            e.preventDefault();
+            alert('Thank you! We will contact you soon.');
+            e.target.reset();
+        });
+    </script>
+
+</body>
+
+</html>
